@@ -10,6 +10,7 @@
 //= require_tree .
 //= require_self
 //= require semantic
+//= require cssearch
 
 if (typeof jQuery !== 'undefined') {
     (function($) {
@@ -20,7 +21,3 @@ if (typeof jQuery !== 'undefined') {
         });
     })(jQuery);
 }
-
-$('#select')
-  .dropdown()
-;

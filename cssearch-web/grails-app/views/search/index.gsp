@@ -12,42 +12,32 @@
             </g:if>
 
             <div class="column">
+
 <g:form action="simpleQ" class="ui form">
   <div class="field">
     <label></label>
     <input type="text" name="simpleq" placeholder="What do you want to ask? e.g.">
   </div>
+   <div class="ui center aligned container">
   <button class="ui green button" type="submit">Go</button>
+  </div>
 </g:form>
             </div>
 
-                        <div class="column">
-            <g:form action="advancedQ" class="ui form">
-
-  <div class="ui four column grid">
-  <div class="column">
-  <i class="add circle icon" id="addconcept"></i>
+            <div class="column">
+<form class="ui form" id='formAdvancedQ'>
+<div class="ui center aligned container" id="addrows">
+    <g:render template="/search/addFirst" />
+    </div>
+  <div class="ui center aligned container">
+    <button class="ui blue button" type="submit" id='submitAdvancedQ'>Go</button>
   </div>
-    <div class="column">
-    <select name="concept" class="ui dropdown" id="select">
-      <option value="">Concept</option>
-      <g:each in="${concepts}">
-        <option value="${it}">${it}</option>
-      </g:each>
-    </select>
-    </div>
-    <div class="column">
-    =
-    </div>
-    <div class="column">
-    <input type="text" name="conceptV" placeholder="value">
-    </div>
-  </div>
-  <button class="ui blue button" type="submit">Go</button>
-            </g:form>
-                        </div>
+</form>
+             </div>
 
-        </div>
+             <div class="column" id="dispResults">
+             </div>
+         </div>
 
     </body>
 </html>
